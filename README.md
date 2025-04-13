@@ -91,6 +91,18 @@ npm run dev
 
 ---
 
+### 📸 UI Screenshots
+
+#### 🧩 Dashboard View
+
+![Dashboard Screenshot](public/screenshots/dashboard.png)
+
+#### 📊 Result Chart
+
+![Result Screenshot](public/screenshots/result-chart.png)
+
+---
+
 ### 🎉 Done!
 
 You're now ready to use the Qanoniah frontend.
