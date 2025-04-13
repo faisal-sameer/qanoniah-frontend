@@ -1,29 +1,96 @@
-# qanoniah-frontend
+# Qanoniah Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This is the frontend part of the Qanoniah full-stack challenge built with Vue 3, Vue Router, and Tailwind CSS.
 
-## Recommended IDE Setup
+## 🚀 Installation Guide (Frontend)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+Follow these steps to run the frontend locally:
 
-## Customize configuration
+---
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+### 1. Clone the Repository
 
-## Project Setup
+```bash
+git clone https://github.com/faisal-sameer/qanoniah-frontend.git
+cd qanoniah-frontend
+```
 
-```sh
+---
+
+### 2. Install Dependencies
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+---
 
-```sh
+### 3. Tailwind Setup
+
+Tailwind CSS is already installed. Config files:
+
+- `tailwind.config.js`
+- `postcss.config.js`
+
+Check for classes in `src/assets/main.css`:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+---
+
+### 4. Axios Setup
+
+The Axios instance is located at `src/axios.js`:
+
+```js
+import axios from 'axios'
+
+const instance = axios.create({
+  baseURL: 'http://127.0.0.1:8000/api',
+  withCredentials: true,
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+})
+
+export default instance
+```
+
+---
+
+### 5. Run the Development Server
+
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+---
 
-```sh
-npm run build
-```
+### 6. Available Routes
+
+| Route             | Description               |
+|------------------|---------------------------|
+| `/login`          | Login page                |
+| `/register`       | Register page             |
+| `/`               | Home (submit job)         |
+| `/progress/:id`   | Show job progress         |
+| `/result/:id`     | Result with chart display |
+| `/dashboard`      | Show all jobs             |
+
+---
+
+### 7. Notes
+
+- Make sure Laravel backend is running at `http://127.0.0.1:8000`
+- Authenticated routes are protected using Vue Router guards
+
+---
+
+### 🎉 Done!
+
+You're now ready to use the Qanoniah frontend.
